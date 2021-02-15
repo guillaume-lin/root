@@ -43,6 +43,9 @@ sap.ui.define(['rootui5/eve7/lib/EveManager'], function(EveManager) {
          // add reference to a streamed eve element to obj3d
          obj3d.eve_el = elem;
 
+         // used by JSROOT.TGeoPainter
+         obj3d._typename = "THREE.Mesh";
+
          // SL: this is just identifier for highlight, required to show items on other places, set in creator
          obj3d.geo_object = elem.fMasterId || elem.fElementId;
          obj3d.geo_name   = elem.fName; // used for highlight
